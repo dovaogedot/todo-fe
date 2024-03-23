@@ -8,7 +8,9 @@ export default defineConfig({
   server: {
     https: {
       cert: fs.readFileSync(process.env.SSL_CRT || 'site.crt'),
-      key: fs.readFileSync(process.env.SSL_KEY || 'site.key')
-    }
+      key: fs.readFileSync(process.env.SSL_KEY || 'site.key'),
+    },
+    port: process.env.TODO_PORT,
+    host: process.env.TODO_HOST,
   }
 })
