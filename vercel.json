@@ -2,5 +2,5 @@
   "rewrites": [
     { "source": "/minesweeper", "destination": "/" },
     { "source": "/palette", "destination": "/" }, 
-    { "source": "/temp", "destination": "/" }]
+    { "source": "/todo", "destination": "/" }]
 }
