@@ -1,6 +1,4 @@
 import { useContext } from "react"
-import { useQuery } from '@apollo/client'
-import { gql } from '../__generated__/gql'
 import Todo from "./Todo"
 import './App.sass'
 import PaletteGenerator from "./PaletteGenerator"
