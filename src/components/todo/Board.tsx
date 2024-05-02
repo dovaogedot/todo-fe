@@ -1,6 +1,6 @@
 import Column from "./Column"
 import './Board.sass'
-import { Dto } from "./dto"
+import { Dto } from "./Dto"
 
 interface Props {
   board: Dto.Board

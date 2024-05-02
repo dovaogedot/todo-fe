@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import Temp from './views/Temp.tsx'
 import { shuffle } from 'underscore'
 import App from './views/App.tsx'
-import { ApolloClient, ApolloProvider, InMemoryCache, gql } from '@apollo/client'
 
 const fonts = shuffle([
   'Amatic SC',
@@ -35,16 +34,8 @@ const fonts = shuffle([
   }
 })
 
-const client = new ApolloClient({
-  uri: 'http://localhost:1234',
-  cache: new InMemoryCache(),
-  connectToDevTools: true
-})
-
 ReactDOM.createRoot(document.body).render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
       <App />
-    </ApolloProvider>
   </React.StrictMode>,
 )

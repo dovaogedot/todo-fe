@@ -1,5 +1,5 @@
 import './Task.sass'
-import { Dto } from './dto'
+import { Dto } from './Dto'
 
 interface Props {
   task: Dto.Task

@@ -3,7 +3,7 @@
 import './Todo.sass'
 import { useState } from "react"
 import Board from "../components/todo/Board"
-import { Dto } from '../components/todo/dto'
+import { Dto } from '../components/todo/Dto'
 
 const Todo = () => {
   // const { loading, data } = useQuery(gql(`#graphql

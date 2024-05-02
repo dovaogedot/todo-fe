@@ -1,6 +1,6 @@
 import Task from "./Task"
 import './Column.sass'
-import { Dto } from "./dto"
+import { Dto } from "./Dto"
 
 interface Props {
   column: Dto.Column
