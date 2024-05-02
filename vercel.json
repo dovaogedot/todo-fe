@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "src": "/minesweeper", "destination": "/" },
-    { "src": "/palette", "destination": "/" }, 
-    { "src": "/temp", "destination": "/" }]
+    { "source": "/minesweeper", "destination": "/" },
+    { "source": "/palette", "destination": "/" }, 
+    { "source": "/temp", "destination": "/" }]
 }
