@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "codegen": "graphql-codegen",
+    "gql": "graphql-codegen -w",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -13,11 +15,20 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@apollo/client": "^3.9.9",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.2.4",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@parcel/watcher": "^2.4.1",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@types/underscore": "^1.11.15",
     "@vitejs/plugin-react": "^4.2.1",
+    "graphql": "^16.8.1",
     "immer": "^10.0.4",
+    "input-event": "^1.2.6",
+    "node-global-key-listener": "^0.2.0",
+    "react-router-dom": "^6.23.0",
     "sass": "^1.71.1",
     "typescript": "^5.4.2",
     "underscore": "^1.13.6",

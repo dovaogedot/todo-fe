@@ -1,0 +1,95 @@
+@use "sass:map"
+     
+$color-light: white
+$color-shadow: gray
+$color-fill: #c6c6c6
+
+$panel-border: 5px
+
+$border-closed-width: 3px
+$border-opened-width: 1px
+
+$border-opened: $border-opened-width solid $color-shadow
+
+@mixin custom-tile($width, $light, $shadow)
+  border-top: $width solid $light
+  border-left: $width solid $light
+  border-right: $width solid $shadow
+  border-bottom: $width solid $shadow
+
+@mixin tile()
+  @include custom-tile($border-closed-width, $color-light, $color-shadow)
+
+@mixin tile-inverse()
+  @include custom-tile($border-closed-width, $color-shadow, $color-light)
+
+.tile
+  @include tile()
+  &::active
+    @include tile-inverse()
+
+.tile-inverse
+  @include tile-inverse()
+
+.minesweeper
+  @include tile()
+  padding: $panel-border
+  background: $color-fill
+
+  .header
+    box-sizing: border-box
+    width: 100%
+    @include tile-inverse()
+    padding: $panel-border
+    margin: $panel-border
+    margin-top: 0
+
+    .new-game
+      @include tile()
+      $size: 32px
+      width: $size
+      height: $size
+      
+      &::after
+        content: '😊'
+        font-size: 24px
+        line-height: 0px
+
+  .minefield
+    @include tile-inverse()
+    background: inherit
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+    .cell
+      box-sizing: border-box
+      $cell-width: 24px
+      width: $cell-width
+      height: $cell-width
+
+      font-size: 16px
+      line-height: 23px
+
+      &.closed, &.flagged
+        @include tile()
+
+      &.flagged::after
+        content: '🚩'
+
+      &.opened
+        border-top: $border-opened
+        border-left: $border-opened
+        font-weight: 1000
+
+        $colors: (1: blue, 2: green, 3: red, 4: navy, 5: maroon, 6: teal, 7: black, 8: gray)
+
+        @each $n, $color in $colors
+          &.value-#{$n}::after
+            content: '#{$n}'
+            color: $color
+        
+        &.value-X
+          background: #4b0000
+          &::after
+            content: '💥'
+            
+          
