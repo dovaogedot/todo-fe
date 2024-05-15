@@ -1,0 +1,63 @@
+@use './Layout.scss' as Layout;
+@use './Color.scss' as Color;
+
+body {
+  background: Color.$background-dark;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  color: Color.$link;
+}
+
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:hover {
+    color: Color.$link-hover;
+  }
+}
+
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.pane {
+  @include Layout.full();
+  padding: 20px;
+}
+
+.panel {
+  @include Layout.flex-column();
+  background: Color.$background;
+  padding: 24px 32px;
+  border-radius: 4px;
+  margin: 10px;
+
+  color: Color.$text;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0 0 10px 5px #0004;
+}
+
+@mixin backdrop($dist: 10px) {
+  box-shadow: 0 0 0 10px #0008;
+}
+
+.backdrop {
+  @include backdrop();
+}

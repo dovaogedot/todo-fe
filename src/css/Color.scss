@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+$background-dark: hsl(231deg, 15%, 18%);
+$background: hsl(232deg, 14%, 31%);
+$background-light: hsl(225deg, 27%, 51%);
+$text: hsl(60deg, 30%, 96%);
+$primary-dark: hsl(265deg, 89%, 78%);
+$secondary: hsl(191deg, 97%, 77%);
+$extra: hsl(65deg, 92%, 76%);
+$extra-dark: hsl(31deg, 100%, 71%);
+$success: hsl(135deg, 94%, 65%);
+$error: hsl(0deg, 100%, 67%);
+$primary: hsl(326deg, 100%, 74%);
+
+$link: color.scale($text, $lightness: -25%);
+$link-hover: $text;
