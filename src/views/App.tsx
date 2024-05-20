@@ -9,6 +9,7 @@ import Form from "./Form"
 import Eurovision from "./Eurovision"
 
 import "/src/css/App.scss"
+import EestiKeel from "./EestiKeel/EestiKeel"
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/todo" element={<Todo />} />
           <Route path="/form" element={<Form />} />
           <Route path="/eurovision" element={<Eurovision />} />
+          <Route path="/eestikeel" element={<EestiKeel />} />
         </Route>
       </Routes>
     </BrowserRouter>

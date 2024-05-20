@@ -42,6 +42,6 @@
   box-sizing: border-box;
 }
 
-.full-w { @include full-width(); }
-.full-h { @include full-height(); }
+.full-width { @include full-width(); }
+.full-height { @include full-height(); }
 .full { @include full(); }
