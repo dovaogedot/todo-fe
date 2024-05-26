@@ -1,7 +1,7 @@
 import _ from "underscore"
 import * as Et from "./Estonian/Estonian"
 import * as Ua from "./Ukrainian/Ukrainian"
-import { Tag, translations } from "./Translations"
+import { Tag, nouns, adjectives } from "./Translations"
 
 type Exercise = {
   et: string
@@ -11,11 +11,11 @@ type Exercise = {
 const up = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 function simpleStatement(): Exercise {
-  const noun = _.sample(translations.filter(t => t.tags.includes(Tag.noun)))!
+  const noun = _.sample(nouns)!
   const et_noun = noun.et
   const ua_noun = noun.ua
 
-  const adj = _.sample(translations.filter(t => t.tags.includes(Tag.adjective)))!
+  const adj = _.sample(adjectives)!
   const et_adj = adj.et
   const ua_adj = adj.ua
 
