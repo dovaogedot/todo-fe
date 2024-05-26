@@ -1,6 +1,8 @@
 {
   "rewrites": [
-    { "source": "/minesweeper", "destination": "/" },
     { "source": "/palette", "destination": "/" }, 
-    { "source": "/todo", "destination": "/" }]
+    { "source": "/minesweeper", "destination": "/" },
+    { "source": "/todo", "destination": "/" },
+    { "source": "/eestikeel", "destination": "/" }
+  ]
 }
