@@ -24,7 +24,7 @@ const nouns: { [a in string]: { et: Et.Noun, ua: Ua.Word }} = {
     ua: new Ua.Noun([['лампа', 'лампи'], ['лампи', 'ламп'], ['лампі', 'лампам'], ['лампу', 'лампи'], ['лампою', 'лампами'], ['лампі', 'лампах'], ['лампо', 'лампи']], Ua.Gender.Feminine),
   },
   ceiling: {
-    et: new Et.Noun({ nime: 'lagi', oma: 'lae', osa: 'lagi' }),
+    et: new Et.Noun({ nime: 'lagi', oma: 'lae', osa: 'lage' }),
     ua: new Ua.Noun([['стеля', 'стелі'], ['стелі', 'стель'], ['стелі', 'стелям'], ['стелю', 'стелі'], ['стелею', 'стелями'], ['стелі', 'стелях'], ['стеле', 'стелі']], Ua.Gender.Feminine),
   },
   curtain: {

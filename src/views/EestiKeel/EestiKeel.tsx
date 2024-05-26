@@ -56,7 +56,7 @@ export default function EestiKeel() {
           ?
           enteredAnswer.trim().split(' ').filter(w => w).map((w, i) => (
             <>
-              <span key={i} className={'word ' + ((mode ? sentence.et : sentence.ua).split(' ')[i] == w ? 'correct' : 'wrong')} onClick={() => handleWordClick(i)}>{w}</span>
+              <span key={i} className={'word ' + ((mode ? sentence.et : sentence.ua).split(' ')[i].toLowerCase() == w.toLowerCase() ? 'correct' : 'wrong')} onClick={() => handleWordClick(i)}>{w}</span>
             </>
           ))
           :
