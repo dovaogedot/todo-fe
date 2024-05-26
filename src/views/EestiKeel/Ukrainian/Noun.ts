@@ -41,6 +41,8 @@ export class Noun extends Word {
     for (let c of this.cases) {
       if (!c[1]) {
         c[1] = c[0]
+      } else if (!c[0]) {
+        c[0] = c[1]
       }
     }
   }

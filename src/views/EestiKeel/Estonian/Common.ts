@@ -20,3 +20,7 @@ export enum GNumber {
   Singular = 1 << 15,
   Plural = 1 << 16,
 }
+
+export abstract class Word {
+  abstract agree(query: Case | GNumber): string
+}

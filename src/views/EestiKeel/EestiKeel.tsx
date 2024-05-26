@@ -1,9 +1,10 @@
 import React, { ChangeEvent, ChangeEventHandler, useEffect, useRef, useState } from "react"
-import { Exercise, simpleStatement } from "./Vocabulary"
+import { Exercise, simpleStatement } from "./Exercise"
 import './EestiKeel.scss'
 import _ from "underscore"
 
 export default function EestiKeel() {
+  document.title = 'Eesti keel'
   const [enteredAnswer, setEnteredAnswer] = useState('')
   const [sentence, setSentence] = useState<Exercise>({ et: '', ua: '' })
   const inputRef = useRef<HTMLInputElement>(null)
@@ -48,16 +49,14 @@ export default function EestiKeel() {
       </div>
       <div className="actions">
         <button className="swap" onClick={swapLanguages}>Навпаки</button>
-        <button className="check" onClick={() => setEnteredAnswer(mode ? sentence.et : sentence.ua)}>{enteredAnswer == '' ? 'Показати відповідь' : 'Перевірити'}</button>
+        <button className="check" onClick={() => setEnteredAnswer(mode ? sentence.et : sentence.ua)}>Показати відповідь</button>
         <button className="more" onClick={doMore}>Ще</button>
       </div>
       <div className="answer" onClick={handleAnswerClick}>
         {enteredAnswer
           ?
           enteredAnswer.trim().split(' ').filter(w => w).map((w, i) => (
-            <>
-              <span key={i} className={'word ' + ((mode ? sentence.et : sentence.ua).split(' ')[i].toLowerCase() == w.toLowerCase() ? 'correct' : 'wrong')} onClick={() => handleWordClick(i)}>{w}</span>
-            </>
+            <span key={i} className={'word ' + ((mode ? sentence.et : sentence.ua).split(' ')[i].toLowerCase() == w.toLowerCase() ? 'correct' : 'wrong')} onClick={() => handleWordClick(i)}>{w}</span>
           ))
           :
           <span className="placeholder">_</span>

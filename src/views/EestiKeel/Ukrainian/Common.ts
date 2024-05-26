@@ -27,8 +27,15 @@ export enum Declension {
 }
 
 export abstract class Word {
-  abstract agree(query: Case | Gender | GNumber): string
   constructor(public gender?: Gender) {}
+
+  abstract agree(query: Case | Gender | GNumber): string
+
+  freeze(query: Case | GNumber | Gender): Word {
+    const word = this.agree(query)
+    this.agree = (q: Case | GNumber | Gender): string => word
+    return this
+  }
 }
 
 export class CombinedWord extends Word {
