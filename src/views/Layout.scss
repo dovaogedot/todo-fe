@@ -6,4 +6,8 @@ nav {
   height: 80px;
   justify-content: space-around;
   align-items: center;
+
+  a {
+    overflow: hidden;
+  }
 }
