@@ -1,0 +1,71 @@
+$color-main: #e1d24e
+$color-secondary: #894ee1
+$color-tetriary: #4ea6e1
+$color-success: #a6e14e
+$color-alert: #e14e4e
+$color-text: #ccc
+$color-text-hover: #fff
+$color-text-inactive: #888
+$background-darker: #181818
+$background-dark: #202020
+$background-mid: #242424
+$background-light: #282828
+$background-lighter: #303030
+
+.todo
+  display: flex
+  width: 100vw
+  height: 100vh
+  flex-direction: column
+  color: $color-text
+  background: #242424
+
+  > .header
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background: $background-mid
+    height: 100px
+    width: 100vw
+
+    > .board-name
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      font-size: 25px
+      margin: 10px
+
+      &:hover
+        color: $color-text-hover
+
+      &.selected
+        color: $color-text-hover
+
+  > .content
+    background: $background-darker
+    border-radius: 20px
+    height: calc(100vh - 100px)
+    border: 1px solid #333
+    margin: 10px
+
+
+  .block
+    display: flex
+    justify-content: stretch
+    min-width: var(--min-width)
+    width: var(--min-width)
+    gap: 5px
+    flex-direction: column
+
+    @mixin a
+      min-width: 100px
+      text-align: left
+
+    & > label
+      @include a
+
+    & > input
+      @include a
+      flex-grow: 1
+      padding-left: 5px
+      padding-right: 5px
+      height: 2rem

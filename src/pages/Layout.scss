@@ -1,0 +1,13 @@
+@use '/src/css/Color.scss' as Color;
+
+nav {
+  background-color: Color.$black;
+  font-family: Yeseva One;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    overflow: hidden;
+  }
+}
