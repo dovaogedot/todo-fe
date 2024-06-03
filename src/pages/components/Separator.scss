@@ -1,0 +1,14 @@
+@use '/src/css/Color.scss';
+
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+
+  .border {
+    margin-left: 10px;
+    flex-grow: 1;
+    border: 1px solid Color.less(Color.$text);
+    height: 0px;
+  }
+}

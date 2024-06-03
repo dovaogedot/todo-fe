@@ -1,0 +1,14 @@
+$text-sizes: (small 1rem, medium 1.5rem, big 2rem);
+$text-weights: (light 400, semibold 500, bold 800);
+
+@each $name, $value in $text-sizes {
+  .text-#{$name} {
+    font-size: $value;
+  }
+}
+
+@each $name, $value in $text-weights {
+  .text-#{$name} {
+    font-weight: $value;
+  }
+}

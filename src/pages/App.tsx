@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 import Layout from "./Layout"
 import Temp from "./Temp"
@@ -15,14 +15,15 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Temp />} />
-          <Route path="/palette" element={<PaletteGenerator />} />
-          <Route path="/minesweeper" element={<Minesweeper />} />
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/eurovision" element={<Eurovision />} />
-          <Route path="/eestikeel" element={<EestiKeel />} />
+          <Route path="palette" element={<PaletteGenerator />} />
+          <Route path="minesweeper" element={<Minesweeper />} />
+          <Route path="todo" element={<Todo />} />
+          <Route path="form" element={<Form />} />
+          <Route path="eurovision" element={<Eurovision />} />
+          <Route path="eestikeel/*" element={<EestiKeel />} />
         </Route>
       </Routes>
     </BrowserRouter>

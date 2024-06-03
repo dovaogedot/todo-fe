@@ -1,10 +1,17 @@
-import { Case } from "./Combined"
+import { Case, Gender, Number } from "./Combined"
 
 export type IDeclined = {
   case: Case
   word: IDeclinable
 }
 
+export type Declension = {
+  case?: Case
+  number?: Number
+  gender?: Gender
+}
+
 export type IDeclinable = {
-  decline: (c?: Case) => string
+  decline: (d: Declension) => string
+  freeze: (d: Declension) => void
 }

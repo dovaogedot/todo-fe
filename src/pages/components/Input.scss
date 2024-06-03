@@ -1,0 +1,31 @@
+@use '/src/css/Color.scss';
+@use 'sass:color';
+
+.input {
+  position: relative;
+  border: 2px solid Color.less(Color.$text);
+  padding-top: 4px;
+  transition: all .2s;
+  border-radius: 8px;
+
+  &:has(> input:focus) {
+    border-color: Color.$text;
+  }
+
+  :nth-child(1) {
+    position: absolute;
+    top: -12px;
+    left: 4px;
+    background: Color.$accent;
+    padding: 0 4px;
+  }
+
+  input {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+  }
+}

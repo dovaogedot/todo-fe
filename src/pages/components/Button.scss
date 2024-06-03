@@ -1,0 +1,19 @@
+@use '/src/css/Color.scss';
+
+button {
+  color: Color.$text;
+  background-color: Color.less(Color.light(Color.$accent));
+  border: none;
+  border-radius: 8px;
+  height: 32px;
+  border: 2px solid transparent;
+  transition: all .2s;
+
+  &:hover {
+    border-color: (Color.light(Color.$accent))
+  } 
+
+  &:active {
+    background-color: Color.less(Color.dark(Color.$accent));
+  }
+}

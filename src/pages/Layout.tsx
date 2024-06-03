@@ -3,7 +3,7 @@ import './Layout.scss'
 
 const Layout = () =>
   <>
-    <nav className="flex-row fs-4">
+    <nav className="flex-row">
       <Link to="/palette">Palette</Link>
       <Link to="/minesweeper">Minesweeper</Link>
       <Link to="/todo">Todo</Link>
